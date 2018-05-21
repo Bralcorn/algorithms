@@ -1,0 +1,44 @@
+1.
+
+  Function makingCoffee
+    ADD water to boiler
+    PLACE coffeeGrinds in topPart
+    TURN ON machine
+    WAIT until beep
+    POUR coffee in cup
+    ENJOY coffee
+  END FUNCTION
+
+  Function washingDishes
+    FOR each dirtyDish
+      WHILE (dish not equal to clean)
+        SCRUB with soapySponge
+        RINSE with water
+        CHECK for cleanliness
+      END WHILE
+    END FOR
+  END FUNCTION
+
+  Function mowLawn
+    For length of grass
+      For width of grass
+        MOW grass
+        MOVE forward 1 space
+      END FOR
+      TURN around
+      MOVE to next row
+    END FOR
+  END FUNCTION
+    
+2.
+
+  Twitter:  algorithm to show you info your interested in seeing
+
+  Facebook: algorithm for sharing stuff with friends
+
+  Youtube: video searching algorithm to keep viewers watching longer
+
+3.
+
+  An efficient algorithm is quick and accurate, with consistent completion of the task. An inefficient 
+  algorithm is the opposite. It is slow, and inaccurate,  not always completing the task if at all.
