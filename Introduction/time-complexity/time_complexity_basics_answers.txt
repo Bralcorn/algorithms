@@ -1,0 +1,73 @@
+1. What is time complexity and what is its relation to algorithms?
+
+  Time complexity is an estimate of how long it takes for a function to execute.
+
+2. What is runtime?
+
+  The runtime is the actual physical time that it takes an algorithm to execute.
+
+3. How is the runtime of an algorithm calculated?
+
+  The runtime is estimated by adding up each line of code that gets executed.
+
+4.  Name the six types of algorithm growth rates we saw in this checkpoint and list them in order 
+of most efficient to least efficient. Now Google another algorithmic growth rate not covered and 
+place it in the correct spot in your list.
+
+  Most efficient
+    Constant
+    Logarithmic
+    Linear
+    Log-Linear
+    Quadratic
+    Exponential
+  Least Efficient  
+
+5.  Choose one of the algorithmic growth rates from the last question and make a comparison to a 
+real-life situation.
+
+  A real life situation could be that bacteria multiply at an exponential rate.
+
+6. Determine the time complexity of the following snippet of code. 
+It is commonly known as a linear search.
+  FUNCTION linearSearch(array, target)
+  FOR each number in the array
+    IF number = target THEN
+      RETURN true
+    END IF
+  END FOR
+  RETURN false
+  END FUNCTION
+
+    The time complexity is 1 + 2n, linear
+
+7. Determine the time complexity of the following snippet of code.
+  FUNCTION foo(array)
+  FOR each number in the array
+    FOR each number in the array
+      print "Hello"
+    END FOR
+  END FOR
+  END FUNCTION
+
+    The time complexity is n + 2n^2, quadratic.
+
+8. Determine the time complexity of the following snippet of code. 
+It is commonly known as the Fibonacci sequence.
+  FUNCTION fibonacci(number)
+  IF number < 1 THEN
+    ERROR
+  ELSE IF number = 1 or 2 THEN
+    RETURN 1
+  ELSE
+    CALL fibonacci WITH number - 2 RETURNING twoBack
+    CALL fibonacci WITH number - 1 RETURNING oneBack
+    RETURN twoBack + oneBack
+  END IF
+  END FUNCTION
+
+    The time complexity is logarithmic. Function resembles a binary tree.
+
+9. Out of the code snippets you just saw, which is the most time efficient?
+
+  The most efficient snippet is the one from question 8.
