@@ -1,0 +1,89 @@
+1. Define and compare recursion and iteration.
+
+  Iteration uses loops, while recursion uses functions that make call on themselves. Recursion is slower
+  than iteration, but it can sometimes be easier to code for recursion than for iteration.
+
+
+2. Name five algorithms that are commonly implemented by recursion.
+
+  The fibonacci sequence, factorials, searching algorithms, sorting algorithms, graph traversal algorithms.
+
+
+3. When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+  For some algorithms it is usually best to write recursive functions when the algorithm being written, 
+  requires a combination of sub-results, like factorials. Iteration is best when the algorithm requires 
+  multiple passovers, like with find the maximum. Another time it is better to use iteration, is when
+  recursion is causing performance problems, like with large numbers in Fibonacci.
+
+
+4. Compare the recursive and iterative solutions to the three algorithms from the checkpoint 
+(Factorial, Maximum, and Fibonacci). What is similar, and what is different?
+
+  For Factorial, The recursive version appears to be less efficient than the iterative one. The 
+  reason being that it need to check is a number is less than 1 for each call on itself, while 
+  the iterative version only needs to check once, however, both have the same linear time complexity. 
+  It also needs to return a result for each call, while the iterative one only needs to return once. 
+  The iterative one use a for loop and stores the value in the variable "result", the recursive version,
+  also uses a variable to keep track of its calls.
+
+  For the Maximum algorithm, the iterative version appears much clean and straight forward then the recursive
+  version, which requires more line of code in order to accomplish the same result. Both have the same linear 
+  time complextity however.
+
+  For Fibonacci, the recursive one is more straight forward and easier to understand than the iterative one, however,
+  the recursive version has a exponential time complexity, while the iterative version is linear, thus, even though the
+  recursive version is easier to understand and write, it is far less efficient than the iterative version.
+
+
+5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, 
+write a recursive algorithm to count the number of items in the entire collection.
+
+  function countCollection(collection) {
+    var total = 0;
+    if(collection.length > 1 && typeof collection != "string"){
+	    for(var i=0; i<collection.length; i++) {
+  	    total = 1 + countCollection(collection[i]);
+      }
+    }
+    else{
+	    total++;
+    }
+    return total;
+  }
+
+6. A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). 
+Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+function isPalindrome(string){
+  string = str
+  if(string.includes(" ")) {
+    string = string.split(" ").join("");
+  }
+  if(string.length === 1) {
+    return true;
+  }
+  var firstLetter = string[0].toLowerCase;
+  var lastLetter = string[string.length-1].toLowerCase; 
+  if(firstLetter != lastLetter) {
+    return false;
+  }
+  else {
+    return isPalindrome(string.slice(1, -1));
+  }
+}
+
+7. Laura and Xander are going door-to-door around their block looking for their lost cat. 
+Write a recursive algorithm showing one way they can visit every house on their block exactly once.
+
+Function checkHouse(house) {
+  IF (house === ownHouse) {
+    return "cat not found";
+  }
+  IF (Cat at house) {
+    return house;
+  }
+  ELSE {
+    call checkHouse with house.next returning house;
+  }
+}
